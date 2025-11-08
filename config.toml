@@ -1,0 +1,22 @@
+[[rules]]
+  file = "testdata/test.pb.go"
+  
+  [[rules.imports]]
+    path = "github.com/deckarep/golang-set"
+    alias = "mapset"
+  
+  [[rules.structs]]
+    name = "User"
+    
+    [[rules.structs.fields]]
+      name = "TestSet"
+      type = "[]mapset.Set"
+      tags = "json:\"-\""
+    [[rules.structs.fields]]
+      name = "TestMap"
+      type = "map[string]string"
+      tags = "json:\"-\""
+    [[rules.structs.fields]]
+      name = "TestNum"
+      type = "int32"
+      tags = "json:\"-\""
